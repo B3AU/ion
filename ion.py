@@ -1,13 +1,7 @@
 import inspect
 
 class ion():
-
-
-
     class inputCollector():
-
-
-
         class inlet():
             def __init__(self,parent,argname):
                 self.p = parent
@@ -31,14 +25,11 @@ class ion():
                 self.parent.f(*arg_values)
 
 
-
-
     def __init__(self,f):
         """
         construct ion from function
         """
         self.f = f
-
 
         #init inlets
         args =  inspect.getargspec(self.f).args
@@ -52,8 +43,8 @@ class ion():
 
 
 def myF(var1,var2):
-    print var1
-    print var2
+    print var1+var2
+
 
 a = ion(myF)
 print 'a.i.var1 << "hello world"'
